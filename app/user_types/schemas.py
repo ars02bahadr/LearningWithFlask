@@ -36,9 +36,9 @@ class UserTypeCreateSchema(UserTypeBaseSchema):
     @classmethod
     def validate_name(cls, v):
         if len(v.strip()) == 0:
-            raise ValueError("Kullanıcı tipi adı boş olamaz")
+            raise ValueError("Lütfen geçerli bir kullanıcı tipi adı giriniz. Boş bir değer kabul edilemez.")
         if len(v) > 50:
-            raise ValueError("Kullanıcı tipi adı 50 karakterden uzun olamaz")
+            raise ValueError("Kullanıcı tipi adı çok uzun. Lütfen 50 karakterden kısa bir isim giriniz.")
         return v
 
 
